@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '5.3.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    slf4jVersion = '1.7.30'
+    testngVersion = '7.3.0'
+    commonsLang3Version = '3.11'
+    hamcrestVersion = '2.2'
+    assertjVersion = '3.18.0'
+    logbackVersion = '1.2.3'
+}
+
+dependencies {
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    testImplementation "org.testng:testng:$testngVersion"
+    implementation "org.apache.commons:commons-lang3:$commonsLang3Version"
+    testImplementation "org.hamcrest:hamcrest:$hamcrestVersion"
+    testImplementation "org.assertj:assertj-core:$assertjVersion"
+    implementation "ch.qos.logback:logback-classic:$logbackVersion"
+}
